@@ -38,10 +38,11 @@ namespace StarterGame
             }
         }
         //This is to find items in the room
+        /*
         public void findMe(string fObject)
         {
             Room items = this._currentRoom.//add funtion in rooms
-        }
+        }*/
 
         public void outputMessage(string message)
         {

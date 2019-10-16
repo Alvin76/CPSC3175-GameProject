@@ -55,6 +55,7 @@ namespace StarterGame
             return exitNames;
         }
         //this is going to return items that are avaible in the room
+        /*
         public string getItems()
         {
             string itemsNames = "Item: ";
@@ -65,7 +66,7 @@ namespace StarterGame
             }
 
             return itemsNames;
-        }
+        }*/
 
         public string description()
         {
