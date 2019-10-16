@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Adam\\Dropbox\\CSU\\6 2019 fall\\CPSC3175 Obj\\The Game\\StarterGame\\StarterGame\\StarterGame.csproj": {}
+    "C:\\Users\\Adam\\Dropbox\\GitHub\\CPSC3175-GameProject\\StarterGame\\StarterGame\\StarterGame.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Adam\\Dropbox\\CSU\\6 2019 fall\\CPSC3175 Obj\\The Game\\StarterGame\\StarterGame\\StarterGame.csproj": {
+    "C:\\Users\\Adam\\Dropbox\\GitHub\\CPSC3175-GameProject\\StarterGame\\StarterGame\\StarterGame.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Adam\\Dropbox\\CSU\\6 2019 fall\\CPSC3175 Obj\\The Game\\StarterGame\\StarterGame\\StarterGame.csproj",
+        "projectUniqueName": "C:\\Users\\Adam\\Dropbox\\GitHub\\CPSC3175-GameProject\\StarterGame\\StarterGame\\StarterGame.csproj",
         "projectName": "StarterGame",
-        "projectPath": "C:\\Users\\Adam\\Dropbox\\CSU\\6 2019 fall\\CPSC3175 Obj\\The Game\\StarterGame\\StarterGame\\StarterGame.csproj",
+        "projectPath": "C:\\Users\\Adam\\Dropbox\\GitHub\\CPSC3175-GameProject\\StarterGame\\StarterGame\\StarterGame.csproj",
         "packagesPath": "C:\\Users\\Adam\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Adam\\Dropbox\\CSU\\6 2019 fall\\CPSC3175 Obj\\The Game\\StarterGame\\StarterGame\\obj\\",
+        "outputPath": "C:\\Users\\Adam\\Dropbox\\GitHub\\CPSC3175-GameProject\\StarterGame\\StarterGame\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
