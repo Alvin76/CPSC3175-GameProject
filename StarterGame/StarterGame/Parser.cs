@@ -30,10 +30,21 @@ namespace StarterGame
                     if (words.Length > 1)
                     {
                         command.secondWord = words[1];
+                        //Console.WriteLine("word 2");
                     }
                     else
                     {
                         command.secondWord = null;
+                    }
+                    if (words.Length > 2)
+                    {
+                        command.thirdWord = words[2];
+                        //Console.WriteLine("Hell yea");
+                    }
+                    else
+                    {
+                        command.thirdWord = null;
+                        //Console.WriteLine("I made it here");
                     }
                 }
                 else
