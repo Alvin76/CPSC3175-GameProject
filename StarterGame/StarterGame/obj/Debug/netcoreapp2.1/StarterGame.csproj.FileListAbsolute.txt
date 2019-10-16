@@ -20,3 +20,14 @@ C:\Users\Adam\Dropbox\CSU\6 2019 fall\CPSC3175 Obj\The Game\StarterGame\StarterG
 C:\Users\Adam\Dropbox\CSU\6 2019 fall\CPSC3175 Obj\The Game\StarterGame\StarterGame\obj\Debug\netcoreapp2.1\StarterGame.AssemblyInfo.cs
 C:\Users\Adam\Dropbox\CSU\6 2019 fall\CPSC3175 Obj\The Game\StarterGame\StarterGame\obj\Debug\netcoreapp2.1\StarterGame.dll
 C:\Users\Adam\Dropbox\CSU\6 2019 fall\CPSC3175 Obj\The Game\StarterGame\StarterGame\obj\Debug\netcoreapp2.1\StarterGame.pdb
+C:\Users\Adam\Dropbox\GitHub\CPSC3175-GameProject\StarterGame\StarterGame\obj\Debug\netcoreapp2.1\StarterGame.csprojAssemblyReference.cache
+C:\Users\Adam\Dropbox\GitHub\CPSC3175-GameProject\StarterGame\StarterGame\obj\Debug\netcoreapp2.1\StarterGame.csproj.CoreCompileInputs.cache
+C:\Users\Adam\Dropbox\GitHub\CPSC3175-GameProject\StarterGame\StarterGame\obj\Debug\netcoreapp2.1\StarterGame.AssemblyInfoInputs.cache
+C:\Users\Adam\Dropbox\GitHub\CPSC3175-GameProject\StarterGame\StarterGame\obj\Debug\netcoreapp2.1\StarterGame.AssemblyInfo.cs
+C:\Users\Adam\Dropbox\GitHub\CPSC3175-GameProject\StarterGame\StarterGame\obj\Debug\netcoreapp2.1\StarterGame.dll
+C:\Users\Adam\Dropbox\GitHub\CPSC3175-GameProject\StarterGame\StarterGame\obj\Debug\netcoreapp2.1\StarterGame.pdb
+C:\Users\Adam\Dropbox\GitHub\CPSC3175-GameProject\StarterGame\StarterGame\bin\Debug\netcoreapp2.1\StarterGame.deps.json
+C:\Users\Adam\Dropbox\GitHub\CPSC3175-GameProject\StarterGame\StarterGame\bin\Debug\netcoreapp2.1\StarterGame.runtimeconfig.json
+C:\Users\Adam\Dropbox\GitHub\CPSC3175-GameProject\StarterGame\StarterGame\bin\Debug\netcoreapp2.1\StarterGame.runtimeconfig.dev.json
+C:\Users\Adam\Dropbox\GitHub\CPSC3175-GameProject\StarterGame\StarterGame\bin\Debug\netcoreapp2.1\StarterGame.dll
+C:\Users\Adam\Dropbox\GitHub\CPSC3175-GameProject\StarterGame\StarterGame\bin\Debug\netcoreapp2.1\StarterGame.pdb
