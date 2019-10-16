@@ -18,10 +18,10 @@ namespace StarterGame
             bool answer = true;
             if (this.hasThirdWord())
             {
-                player.outputMessage("\nI cannot quit " + this.thirdWord);
+                player.outputMessage("\nI cannot quit " + this.secondWord + ' ' + this.thirdWord);
                 answer = false;
             }
-            if (this.hasSecondWord())
+            else if (this.hasSecondWord())
             {
                 player.outputMessage("\nI cannot quit " + this.secondWord);
                 answer = false;
