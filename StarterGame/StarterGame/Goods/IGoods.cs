@@ -4,7 +4,9 @@ using System.Text;
 
 namespace StarterGame.Goods
 {
-    interface IGoods
+    enum ItemType { KEYITEM, WEAPON, HEAD, SHIRT, PANTS, SHOES, GLOVES, CONSUMABLE, OTHER }
+
+interface IGoods
     {
         
     }

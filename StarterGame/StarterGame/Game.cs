@@ -88,6 +88,10 @@ namespace StarterGame
                 }
             }
         }
+        public void load()
+        {
+            
+        }
 
 
         public void start()

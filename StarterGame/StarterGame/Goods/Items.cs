@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace StarterGame
+namespace StarterGame.Goods
 {
-    enum ItemType { KEYITEM, WEAPON, HEAD, SHIRT, PANTS, SHOES, GLOVES, CONSUMABLE, OTHER}
+   // enum ItemType { KEYITEM, WEAPON, HEAD, SHIRT, PANTS, SHOES, GLOVES, CONSUMABLE, OTHER}
+   // This needs to be abstract or interface this will cause the items that will be objects to be tightly cupoled to this.
+   // I like how this is going though.
     class Items
     {
         private String itemName;
