@@ -72,5 +72,11 @@ namespace StarterGame
         {
             return "You are " + this.tag + ".\n *** " + this.getExits();
         }
+        //This for tradeing items 
+        /*
+        public string TradeRoom()
+        {
+            NotImplementedYet
+        }*/
     }
 }
