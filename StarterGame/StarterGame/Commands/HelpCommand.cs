@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 
-namespace StarterGame
+namespace StarterGame.Commands
 {
     public class HelpCommand : Command
     {

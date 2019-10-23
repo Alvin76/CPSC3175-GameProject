@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System;
 
-namespace StarterGame
+namespace StarterGame.Commands
 {
     public abstract class Command
     {

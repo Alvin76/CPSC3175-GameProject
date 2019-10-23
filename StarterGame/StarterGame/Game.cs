@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System;
+using StarterGame.Commands;
 
 namespace StarterGame
 {
@@ -28,8 +29,10 @@ namespace StarterGame
             Room theGreen = new Room("in the green in from of Schuster Center");
             Room universityHall = new Room("in University Hall");
             Room schuster = new Room("in the Schuster Center");
-            //I want to add more rooms here for the player to have a school class scedule 
-            //I want to add most of the rooms back with them damaged from the fallout.  
+            Room temp1 = new Room("lost room");
+            // add more rooms here around the school 
+            // add post event rooms here too XD 
+            // will need to figure out to change when the room go from one event to another
 
             outside.setExit("west", boulevard);
 
@@ -86,6 +89,10 @@ namespace StarterGame
                     finished = command.execute(player);
                 }
             }
+        }
+        public void load()
+        {
+            
         }
 
 
