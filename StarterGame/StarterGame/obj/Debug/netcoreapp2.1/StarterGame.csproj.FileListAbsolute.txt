@@ -31,3 +31,14 @@ C:\Users\Adam\Dropbox\GitHub\CPSC3175-GameProject\StarterGame\StarterGame\bin\De
 C:\Users\Adam\Dropbox\GitHub\CPSC3175-GameProject\StarterGame\StarterGame\bin\Debug\netcoreapp2.1\StarterGame.runtimeconfig.dev.json
 C:\Users\Adam\Dropbox\GitHub\CPSC3175-GameProject\StarterGame\StarterGame\bin\Debug\netcoreapp2.1\StarterGame.dll
 C:\Users\Adam\Dropbox\GitHub\CPSC3175-GameProject\StarterGame\StarterGame\bin\Debug\netcoreapp2.1\StarterGame.pdb
+F:\VS projects\GameProject\CPSC3175-GameProject\StarterGame\StarterGame\bin\Debug\netcoreapp2.1\StarterGame.deps.json
+F:\VS projects\GameProject\CPSC3175-GameProject\StarterGame\StarterGame\bin\Debug\netcoreapp2.1\StarterGame.runtimeconfig.json
+F:\VS projects\GameProject\CPSC3175-GameProject\StarterGame\StarterGame\bin\Debug\netcoreapp2.1\StarterGame.runtimeconfig.dev.json
+F:\VS projects\GameProject\CPSC3175-GameProject\StarterGame\StarterGame\bin\Debug\netcoreapp2.1\StarterGame.dll
+F:\VS projects\GameProject\CPSC3175-GameProject\StarterGame\StarterGame\bin\Debug\netcoreapp2.1\StarterGame.pdb
+F:\VS projects\GameProject\CPSC3175-GameProject\StarterGame\StarterGame\obj\Debug\netcoreapp2.1\StarterGame.csprojAssemblyReference.cache
+F:\VS projects\GameProject\CPSC3175-GameProject\StarterGame\StarterGame\obj\Debug\netcoreapp2.1\StarterGame.csproj.CoreCompileInputs.cache
+F:\VS projects\GameProject\CPSC3175-GameProject\StarterGame\StarterGame\obj\Debug\netcoreapp2.1\StarterGame.AssemblyInfoInputs.cache
+F:\VS projects\GameProject\CPSC3175-GameProject\StarterGame\StarterGame\obj\Debug\netcoreapp2.1\StarterGame.AssemblyInfo.cs
+F:\VS projects\GameProject\CPSC3175-GameProject\StarterGame\StarterGame\obj\Debug\netcoreapp2.1\StarterGame.dll
+F:\VS projects\GameProject\CPSC3175-GameProject\StarterGame\StarterGame\obj\Debug\netcoreapp2.1\StarterGame.pdb

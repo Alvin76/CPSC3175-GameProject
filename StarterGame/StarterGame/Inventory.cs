@@ -70,12 +70,7 @@ namespace StarterGame
         public void discardItem(String itemName)
         {
             Items target = findItem(itemName);
-            if(target.Type == ItemType.KEYITEM)
-            {
-                //place holder for now
-                Console.WriteLine("This is an key item you cannot discard it!");
-            }
-            else if(target == null)
+            if(target == null)
             {
                 //place holder for now
                 Console.WriteLine("Item does not exist in inventory!");
@@ -91,12 +86,7 @@ namespace StarterGame
         public void useItem(String itemName)
         {
             Items target = findItem(itemName);
-            if (target.Type == ItemType.KEYITEM)
-            {
-                //place holder for now
-                Console.WriteLine("This is an key item you cannot discard it!");
-            }
-            else if (target == null)
+            if (target == null)
             {
                 //place holder for now
                 Console.WriteLine("Item does not exist in inventory!");
