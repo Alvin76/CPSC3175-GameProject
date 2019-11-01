@@ -21,7 +21,7 @@ namespace StarterGame.Goods
         public int ManaRecovery { get { return manaRecovery; } set { manaRecovery = value; } }
         private int techRecovery;
         public int TechRecovery { get { return techRecovery; } set { techRecovery = value; } }
-        private ItemType type;
+        //private ItemType type;
         public ItemType Type { get { return type; } set { type = value; } }
 
         public NonEquipments(String ItemName, float Volumn, float Weight, int Count, float Worth, int HealthRecovery, int ManaRecovery, int TechRecovery, ItemType Type)
