@@ -4,11 +4,10 @@ using System.Text;
 
 namespace StarterGame.Characters
 {
-    class NPC : IStats
+    class Monster : IStats
     {
         private String name;
         public String Name { get { return name; } set { name = value; } }
-
         private int atk;
         public int ATK { get { return atk; } set { atk = value; } }
         private int def;
@@ -26,10 +25,7 @@ namespace StarterGame.Characters
         private int currentTP;
         public int CurrentTP { get { return currentTP; } set { currentTP = value; } }
 
-        private List<String> dialog = new List<String>();
-
-        //designated constructure
-        public NPC(String Name, int ATK, int DEF, int HP, int MP, int TP)
+        public Monster(String Name, int ATK, int DEF, int HP, int MP, int TP)
         {
             this.Name = Name;
             this.ATK = ATK;
@@ -37,18 +33,6 @@ namespace StarterGame.Characters
             this.MaxHP = CurrentHP = HP;
             this.MaxMP = CurrentMP = MP;
             this.MaxTP = CurrentTP = TP;
-        }
-
-        // adding in npc dialog
-        public void addDialog(String newDialog)
-        {
-            dialog.Add(newDialog);
-        }
-
-        //getting a specific dialog
-        public String text(int index)
-        {
-            return dialog[index];
         }
     }
 }

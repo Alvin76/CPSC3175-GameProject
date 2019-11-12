@@ -8,11 +8,14 @@ namespace StarterGame.Characters
     {
         // basic accessor functions
         String Name { get; set; }
-        int Level { get; set; }
         int ATK { get; set; }
         int DEF { get; set; }
-        int HP { get; set; }
-        int MP { get; set; }
-        int TP { get; set; }
+        int MaxHP { get; set; }
+        int CurrentHP { get; set; }
+        int MaxMP { get; set; }
+        int CurrentMP { get; set; }
+        int MaxTP { get; set; }
+        int CurrentTP { get; set; }
+
     }
 }
