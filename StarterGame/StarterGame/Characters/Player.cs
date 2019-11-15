@@ -8,7 +8,8 @@ namespace StarterGame.Characters
     {
         // singleton for player class
         private static Player player = null;
-        // interface functions
+
+        // interface accessors
         private String name;
         public String Name { get { return name; } set { name = value; } }
         private int atk;
@@ -34,6 +35,7 @@ namespace StarterGame.Characters
         private int[] levelPoint = new int[19] { 2, 6, 12, 20, 30, 42, 56, 72, 90, 110, 132, 156, 182, 210, 240, 272, 306, 342, 380 };
         private int exp;
         public int EXP { get { return exp; } set { exp = value; } }
+        private List<PlayerAbility> abilityList = null;
 
         //default constructor
         private Player()
@@ -44,6 +46,7 @@ namespace StarterGame.Characters
             ATK = DEF = 5;// ATK = 5; DEF = 5;
             MaxHP = 15;
             MaxMP = MaxTP = 10;// MP = 10; TP = 10;
+            abilityList = new List<PlayerAbility>();
         }
 
         // player singleton
@@ -56,15 +59,14 @@ namespace StarterGame.Characters
             return player;
         }
 
-        public void gainExp(int newExp)
+        private void gainExp(int newExp)
         {
             EXP += newExp;
-            int totalLevelUp = levelUp(EXP);
-
+            int totalLevelUp = levelUp(EXP); // checking level upif there is any
 
         }
 
-        public int levelUp(int experience)
+        private int levelUp(int experience)
         {
             int totalLevelUp = 0;
             if (experience < levelPoint[level - 1])
@@ -74,9 +76,17 @@ namespace StarterGame.Characters
             else
             {
                 level += 1;
+                // not subtracting from current exp but going up by level then check each level up requirement
                 totalLevelUp = levelUp(experience) + 1;
             }
             return totalLevelUp;
+        }
+        
+        // incomplete LearnAbility method, need to check for level not manually learn ability, unless you want to gain ability point as well
+        private void LearnAbility(PlayerAbility newAbility)
+        {
+            // was thinking about the player have a fixed list of abilities outside of the player class, then add in abilites one by one as the player level up once the level requirement is reached
+            abilityList.Add(newAbility);
         }
 
         private Room _currentRoom = null;
