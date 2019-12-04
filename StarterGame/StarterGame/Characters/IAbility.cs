@@ -10,6 +10,7 @@ namespace StarterGame.Characters
         String AbilityName { get; set; }
         int MPCost { get; set; }
         int TPCost { get; set; }
+        int AbilityMod { get; set; }
         AbilityType Type { get; set; }
     }
 }

@@ -30,6 +30,8 @@ namespace StarterGame.Characters
         public int CurrentTP { get { return currentTP; } set { currentTP = value; } }
 
         // player only 
+        private bool inCombat;
+        public bool InCombat { get { return inCombat; } set { inCombat = value; } }
         private int level;
         public int Level { get { return level; } set { level = value; } }
         private int[] levelPoint = new int[19] { 2, 6, 12, 20, 30, 42, 56, 72, 90, 110, 132, 156, 182, 210, 240, 272, 306, 342, 380 };
@@ -47,6 +49,7 @@ namespace StarterGame.Characters
             MaxHP = 15;
             MaxMP = MaxTP = 10;// MP = 10; TP = 10;
             abilityList = new List<PlayerAbility>();
+            InCombat = false;
         }
 
         // player singleton
@@ -59,13 +62,13 @@ namespace StarterGame.Characters
             return player;
         }
 
+        // gaining exp
         private void gainExp(int newExp)
         {
             EXP += newExp;
             int totalLevelUp = levelUp(EXP); // checking level upif there is any
-
         }
-
+        // leveling up
         private int levelUp(int experience)
         {
             int totalLevelUp = 0;
@@ -89,6 +92,67 @@ namespace StarterGame.Characters
             abilityList.Add(newAbility);
         }
 
+        //checking if character is in combat or not
+        private bool checkCombat()
+        {
+            return InCombat;
+        }
+
+        //changing combat state
+        private void changeCombatStatus( bool state)
+        {
+            InCombat = state;
+        }
+
+        //view skill list
+        private String ability()
+        {
+            String list = "";
+            if (abilityList.Count != 0)
+            {
+                for(int index = 0; index < abilityList.Count; index++)
+                {
+                    list += abilityList[index].AbilityName + "\n";
+                }
+            }
+            else
+            {
+                list = "There is no known abilities";
+            }
+            return list;
+        }
+
+        //checking if ability is available
+        private bool existingAbility(String abilityName)
+        {
+            bool checking = false;
+            for(int index = 0; index < abilityList.Count; index++)
+            {
+                if (abilityList[index].AbilityName == abilityName)
+                {
+                    checking = true;
+                }
+            }
+            return checking;
+        }
+
+        // checking if ability is usable
+        private bool usableAbility(String abilityName)
+        {
+            bool usable = false;
+            for(int index = 0; index < abilityList.Count; index++)
+            {
+                if(abilityList[index].AbilityName == abilityName)
+                {
+                    usable = abilityList[index].canBeUse(InCombat);
+                }
+            }
+            return usable;
+        }
+
+        //helper function
+        // private PlayerAbility findAbility
+
         private Room _currentRoom = null;
         public Room currentRoom
         {
@@ -106,6 +170,7 @@ namespace StarterGame.Characters
         {
             _currentRoom = room;
         }
+
         //This is to move into each room or how the GoComand works
         public void waltTo(string direction)
         {

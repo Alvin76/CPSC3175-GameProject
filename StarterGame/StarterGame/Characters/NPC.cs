@@ -6,9 +6,9 @@ namespace StarterGame.Characters
 {
     class NPC : IStats
     {
+        // accessor from IStats
         private String name;
         public String Name { get { return name; } set { name = value; } }
-
         private int atk;
         public int ATK { get { return atk; } set { atk = value; } }
         private int def;
@@ -26,10 +26,13 @@ namespace StarterGame.Characters
         private int currentTP;
         public int CurrentTP { get { return currentTP; } set { currentTP = value; } }
 
-        private List<String> dialog = new List<String>();
+        private bool helper;
+        public bool Helper { get { return helper; } set { helper = value; } }
+        private List<String> dialog; // main dialog
+        private List<String> help; // serve as a guide for the player, will only give to the friend so is mainly untouched
 
         //designated constructure
-        public NPC(String Name, int ATK, int DEF, int HP, int MP, int TP)
+        public NPC(String Name, int ATK, int DEF, int HP, int MP, int TP, bool Helper)
         {
             this.Name = Name;
             this.ATK = ATK;
@@ -37,6 +40,12 @@ namespace StarterGame.Characters
             this.MaxHP = CurrentHP = HP;
             this.MaxMP = CurrentMP = MP;
             this.MaxTP = CurrentTP = TP;
+            dialog = new List<String>();
+            this.Helper = Helper;
+            if(Helper)
+            {
+                help = new List<String>();
+            }
         }
 
         // adding in npc dialog
@@ -50,5 +59,21 @@ namespace StarterGame.Characters
         {
             return dialog[index];
         }
+
+        //making the helper similar to dialog but its o
+        public String hint(int index)
+        {
+            String tips;
+            if(Helper)
+            {
+                tips = help[index];
+            }
+            else
+            {
+                tips = "Invalid";
+            }
+            return tips;
+        }
+
     }
 }

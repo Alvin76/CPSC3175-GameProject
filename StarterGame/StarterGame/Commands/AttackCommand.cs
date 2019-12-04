@@ -11,7 +11,7 @@ namespace StarterGame.Commands
         {
             this.name = "attack";
         }
-        public override bool execute(Player player)
+        public override bool execute(Characters.Player player)
         {
             if (this.hasSecondWord())
             {
