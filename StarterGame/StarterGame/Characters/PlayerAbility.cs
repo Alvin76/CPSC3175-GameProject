@@ -60,6 +60,5 @@ namespace StarterGame.Characters
             }
             return canBeUsed;
         }
-
     }
 }

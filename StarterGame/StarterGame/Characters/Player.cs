@@ -99,7 +99,7 @@ namespace StarterGame.Characters
         }
 
         //changing combat state
-        private void changeCombatStatus( bool state)
+        private void changeCombatStatus(bool state)
         {
             InCombat = state;
         }
@@ -122,36 +122,90 @@ namespace StarterGame.Characters
             return list;
         }
 
+        //helper function
+        private PlayerAbility findAbility(String target)
+        {
+            PlayerAbility find = null;
+            for (int index = 0; index < abilityList.Count; index++)
+            {
+                if (abilityList[index].AbilityName == target)
+                {
+                    find = abilityList[index];
+                }
+            }
+            return find;
+        }
+
         //checking if ability is available
         private bool existingAbility(String abilityName)
         {
             bool checking = false;
-            for(int index = 0; index < abilityList.Count; index++)
+            if(findAbility(abilityName) != null)
             {
-                if (abilityList[index].AbilityName == abilityName)
-                {
-                    checking = true;
-                }
+                checking = true;
+            }
+            else
+            {
+                checking = false;
             }
             return checking;
         }
 
         // checking if ability is usable
-        private bool usableAbility(String abilityName)
+        private int usableAbility(String abilityName)
         {
-            bool usable = false;
-            for(int index = 0; index < abilityList.Count; index++)
+            int effect = 0;
+            PlayerAbility targetAbility = findAbility(abilityName);
+            if (targetAbility != null)
             {
-                if(abilityList[index].AbilityName == abilityName)
+                if (Level >= targetAbility.LevelRequirement)
                 {
-                    usable = abilityList[index].canBeUse(InCombat);
+                    if(targetAbility.canBeUse(InCombat))
+                    {
+                        if(InCombat == true)
+                        {
+                            if(CurrentMP - targetAbility.MPCost >= 0)
+                            {
+                                if(targetAbility.Type == AbilityType.DAMAGE)
+                                {
+                                    CurrentMP -= targetAbility.MPCost;
+                                }
+                                else if(targetAbility.Type == AbilityType.HEAL)
+                                {
+
+                                }
+                            }
+                            else
+                            {
+                                Console.WriteLine("You do not have the mana to use this ability!");
+                                effect = 0;
+                            }
+
+                        }
+                        else if(InCombat == false)
+                        {
+
+                        }
+                    }
+                    else
+                    {
+                        effect = 0;
+                        Console.WriteLine("This ability cannot be used at this time.");
+                    }
+                }
+                else
+                {
+                    effect = 0;
+                    Console.WriteLine("You are not high enough level to use this ability");
                 }
             }
-            return usable;
+            else
+            {
+                effect = 0;
+                Console.WriteLine("The following abillity does not exist!");
+            }
+            return effect;
         }
-
-        //helper function
-        // private PlayerAbility findAbility
 
         private Room _currentRoom = null;
         public Room currentRoom

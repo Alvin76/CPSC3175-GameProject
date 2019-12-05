@@ -4,7 +4,7 @@ using System.Text;
 
 namespace StarterGame.Characters
 {
-    enum AbilityType { DAMAGE, HEAL, OTHER}
+    enum AbilityType { DAMAGE, HEAL}
     interface IAbility
     {
         String AbilityName { get; set; }
