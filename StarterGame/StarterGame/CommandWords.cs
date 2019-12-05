@@ -18,7 +18,8 @@ namespace StarterGame
                                                   new HelpCommand(),
                                                   new InvantoryCommand(), 
                                                   new ConditionCommand(), 
-                                                  new StatisCommand()
+                                                  new StatisCommand(),
+                                                  new TimeCommand()
         };
         //Added in FindCommand 
 
