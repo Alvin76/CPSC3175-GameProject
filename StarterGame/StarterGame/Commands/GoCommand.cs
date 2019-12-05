@@ -12,7 +12,7 @@ namespace StarterGame.Commands
         }
 
         override
-        public bool execute(Player player)
+        public bool execute(Characters.Player player)
         {
             if (this.hasSecondWord())
             {

@@ -10,7 +10,7 @@ namespace StarterGame.Commands
         {
             this.name = "load";
         }
-        public override bool execute(Player player)
+        public override bool execute(Characters.Player player)
         {
             throw new NotImplementedException();
         }

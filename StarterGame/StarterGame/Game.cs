@@ -92,7 +92,11 @@ namespace StarterGame
         }
         public void load()
         {
-            
+            // we need to add something here
+        }
+        public void save()
+        {
+            // we need to add something here
         }
 
 

@@ -29,6 +29,6 @@ namespace StarterGame.Commands
             return this.thirdWord != null;
         }
 
-        public abstract bool execute(Player player);
+        public abstract bool execute(Characters.Player player);
     }
 }
