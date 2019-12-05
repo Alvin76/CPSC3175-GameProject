@@ -18,7 +18,7 @@ namespace StarterGame
         {
             inventory = new Dictionary<string, Items>();
             maxVolumn = 250f;
-            maxWeight = 15f;
+            maxWeight = 25f;
             currentVolumn = 0f;
             currentWeight = 0f;
         }

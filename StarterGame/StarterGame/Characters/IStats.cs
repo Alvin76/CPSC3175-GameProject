@@ -10,12 +10,17 @@ namespace StarterGame.Characters
         String Name { get; set; }
         int ATK { get; set; }
         int DEF { get; set; }
-        int MaxHP { get; set; }
+        //int MaxHP { get; set; }
         int CurrentHP { get; set; }
+        bool Alive { get; set; }
+        /*
         int MaxMP { get; set; }
         int CurrentMP { get; set; }
         int MaxTP { get; set; }
         int CurrentTP { get; set; }
+        */
 
+        void attack(IStats unit);
+        void takeDamage(int damage);
     }
 }
