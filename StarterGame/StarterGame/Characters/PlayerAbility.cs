@@ -21,8 +21,6 @@ namespace StarterGame.Characters
         // other player only value
         private int levelRequirement;
         public int LevelRequirement { get { return levelRequirement; } set { levelRequirement = value; } }
-        private bool universalAbility;
-        public bool UniversalAbility { get { return universalAbility; } set { universalAbility = value; } }
         private bool combatAbility;
         public bool CombatAbility { get { return combatAbility; } set { combatAbility = value; } }
 
@@ -35,28 +33,20 @@ namespace StarterGame.Characters
             this.AbilityMod = AbilityMod;
             this.Type = Type;
             this.LevelRequirement = LevelRequirement;
-            this.UniversalAbility = UniversalAbility;
             this.CombatAbility = CombatAbility;
         }
 
-        // ability that can be used 
+        // ability check if the 
         public bool canBeUse(bool ifCombat)
-        {
+        { 
             bool canBeUsed = false;
-            if(UniversalAbility)
+            if(ifCombat == CombatAbility)
             {
                 canBeUsed = true;
             }
             else
             {
-                if(ifCombat == CombatAbility)
-                {
-                    canBeUsed = true;
-                }
-                else
-                {
-                    canBeUsed = false;
-                }
+                canBeUsed = false;
             }
             return canBeUsed;
         }
