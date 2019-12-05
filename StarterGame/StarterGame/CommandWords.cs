@@ -9,7 +9,17 @@ namespace StarterGame
     {
         // @R I think this is used to accesses commands and place them in
         Dictionary<string, Command> commands;
-        private static Command[] commandArray = { new GoCommand(), new QuitCommand(), new FindCommand() };
+        private static Command[] commandArray = { new GoCommand(),
+                                                  new QuitCommand(),
+                                                  new FindCommand(),
+                                                  new BackCommand(),
+                                                  new AttackCommand(), 
+                                                  new EquipCommand(), 
+                                                  new HelpCommand(),
+                                                  new InvantoryCommand(), 
+                                                  new ConditionCommand(), 
+                                                  new StatisCommand()
+        };
         //Added in FindCommand 
 
         public CommandWords() : this(commandArray)
