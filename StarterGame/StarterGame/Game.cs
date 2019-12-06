@@ -37,10 +37,14 @@ namespace StarterGame
             // add post event rooms here too XD
             // will need to figure out to change when the room go from one event to another
 
+            IGoods.NewNonEquipments tree = new IGoods.NewNonEquipments("Tree", 800f, 1000f, 1, 0, 0, false);
+            IGoods.NewNonEquipments paper = new IGoods.NewNonEquipments("Paper", 0.1f, 0.002f, 1, 0, 0, true);
+            IGoods.NewNonEquipments chocolate = new IGoods.NewNonEquipments("Chocolate", 4f, 2f, 2, 2, 3, true);
+            IGoods.NewEquipments binder = new IGoods.NewEquipments("Binder", 40f, 4f, 1, 2, 2, 10, true, true);
+
             outside.setExit("west", boulevard);
-            IGoods.NewNonEquipments tree = new IGoods.NewNonEquipments("Tree", 800f, 1000f, 2, 0, 0, 0, false);
-            outside.addItem(new IGoods.NewNonEquipments("Tree", 800f, 1000f, 2, 0, 0, 0, false));
             Console.WriteLine(outside.searchRoom());
+
 
             boulevard.setExit("east", outside);
             boulevard.setExit("south", cctparking);
@@ -86,7 +90,6 @@ namespace StarterGame
             {
                 Console.Write("\n>");
                 Command command = parser.parseCommand(Console.ReadLine());
-                Console.WriteLine()
                 if (command == null)
                 {
                     Console.WriteLine("I don't understand...");

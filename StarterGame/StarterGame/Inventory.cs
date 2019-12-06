@@ -19,8 +19,7 @@ namespace StarterGame
             inventory = new List<IGoods.IGoods>();
             maxVolumn = 200f;
             maxWeight = 20f;
-            currentVolumn = 0f;
-            currentWeight = 0f;
+            currentVolumn = currentWeight = 0f;
         }
 
         public static Inventory haveOne()
@@ -65,13 +64,13 @@ namespace StarterGame
             return search;
         }
 
+        // Discarding item in inventory
         public void discardItem(String itemName)
         {
             IGoods.IGoods target = findItem(itemName);
             if(target == null)
             {
-                //place holder for now
-                Console.WriteLine("Item does not exist in inventory!");
+                Console.WriteLine(itemName + " does not exist in inventory!");
             }
             else
             {
@@ -89,28 +88,27 @@ namespace StarterGame
         }
 
         // using item
-        public void useItem(String itemName)
+        public IGoods.IGoods useItem(String itemName)
         {
             IGoods.IGoods target = findItem(itemName);
             if (target == null)
             {
-                //place holder for now
-                Console.WriteLine("Item does not exist in inventory!");
+                Console.WriteLine(itemName + " does not exist in inventory!");
             }
             else
             {
-                if (target.Destroyable)
+                if (target.Destroyable && target.Useable)
                 {
+                    currentWeight -= target.Weight;
+                    currentVolumn -= target.Volumn;
                     if (target.Count > 1)
                     {
-                        currentWeight -= target.Weight;
-                        currentVolumn -= target.Volumn;
                         findItem(itemName).Count -= 1;
                         Console.WriteLine("One of the "+ target.ItemName +" item is used!");
                     }
                     else
                     {
-                        Console.WriteLine("U used " + target.ItemName + " !");
+                        Console.WriteLine("You used " + target.ItemName + " !");
                         inventory.Remove(findItem(itemName));
                     }
                 }
@@ -119,22 +117,50 @@ namespace StarterGame
                     Console.WriteLine("You can't use this item!");
                 }
             }
+            return target;
         }
 
+        // equiping an item
+        public IGoods.IGoods equipItem(String itemName)
+        {
+            IGoods.IGoods target = findItem(itemName);
+            if (target == null)
+            {
+                Console.WriteLine(itemName + " does not exist in inventory!");
+            }
+            else
+            {
+                currentWeight -= target.Weight;
+                currentVolumn -= target.Volumn;
+                if (target.Count > 1)
+                {
+                    findItem(itemName).Count -= 1;
+                }
+                else
+                {
+                    inventory.Remove(target);
+                }
+            }
+            return target;
+        }
+
+        // print all item in inventory
         public String inInventory()
         {
             String temp = "";
             if(inventory.Count == 0)
             {
-                temp = "There is nothing in inventory!";
+                temp = "There is nothing in inventory!\n";
             }
             else
             {
                 for(int index = 0; index < inventory.Count; index++)
                 {
-
+                    temp += inventory[index].ItemName + ": " + inventory[index].Count + "\n";
                 }
             }
+            temp += currentVolumn + "/" + maxVolumn + "\n";
+            temp += currentWeight + "/" + maxWeight + "\n";
             return temp;
         }
     }

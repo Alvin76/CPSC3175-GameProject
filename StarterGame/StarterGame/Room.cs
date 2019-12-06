@@ -144,23 +144,24 @@ namespace StarterGame
             }
         }
 
+        //picking up 
         public IGoods.IGoods getItem(String itemName)
         {
             IGoods.IGoods target = findItem(itemName);
             if (target == null)
             {
-                Console.WriteLine("Item does not exist in inventory!");
+                Console.WriteLine("Item does not exist in this room!");
             }
             else
             {
                 if (target.Count > 1)
                 {
                     findItem(itemName).Count -= 1;
-                    Console.WriteLine("One of the " + target.ItemName + " item is used!");
+                    Console.WriteLine("One of the " + target.ItemName + " item is placed in inventory!");
                 }
                 else
                 {
-                    Console.WriteLine("U used " + target.ItemName + " !");
+                    Console.WriteLine("You placed " + target.ItemName + " into your inventory!");
                     itemInRoom.Remove(findItem(itemName));
                 }
             }
@@ -181,11 +182,11 @@ namespace StarterGame
                 {
                     if (itemInRoom[index].Count == 1)
                     {
-                        search += "There is " + itemInRoom[index].ItemName + " in the room!\n";
+                        search += "There is " + itemInRoom[index].ItemName + " in the room!";
                     }
                     else
                     {
-                        search += "There are " + itemInRoom[index].Count + " " + itemInRoom[index].ItemName + " in this room!\n";
+                        search += "There are " + itemInRoom[index].Count + " " + itemInRoom[index].ItemName + " in this room!";
                     }
                 }
             }
