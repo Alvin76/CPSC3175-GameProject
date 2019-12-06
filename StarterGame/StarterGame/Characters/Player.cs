@@ -260,7 +260,7 @@ namespace StarterGame.Characters
 
         public String whatIsInInventory()
         {
-            return 
+            return null; 
         }
 
         private Room _currentRoom = null;

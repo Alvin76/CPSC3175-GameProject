@@ -86,7 +86,7 @@ namespace StarterGame
             {
                 Console.Write("\n>");
                 Command command = parser.parseCommand(Console.ReadLine());
-                Console.WriteLine()
+                Console.WriteLine();
                 if (command == null)
                 {
                     Console.WriteLine("I don't understand...");
