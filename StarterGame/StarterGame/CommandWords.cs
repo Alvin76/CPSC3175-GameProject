@@ -2,25 +2,26 @@
 using System.Collections.Generic;
 using System;
 using StarterGame.Commands;
+using System.IO;
 
 namespace StarterGame
 {
     public class CommandWords
     {
-
+        //private TextWriter pathlog = new StreamWriter("C:\\PathLog.txt");
         // @R I think this is used to accesses commands and place them in
         Dictionary<string, Command> commands;
         private static Command[] commandArray = { new GoCommand(),
                                                   new QuitCommand(),
                                                   new FindCommand(),
                                                   new BackCommand(),
-                                                  new AttackCommand(), 
-                                                  new EquipCommand(), 
-                                                  new InvantoryCommand(), 
-                                                  new ConditionCommand(), 
+                                                  new AttackCommand(),
+                                                  new EquipCommand(),
+                                                  new InvantoryCommand(),
+                                                  new ConditionCommand(),
                                                   new StatisCommand()
         };
-        //Added in FindCommand 
+        //Added in FindCommand
 
         public CommandWords() : this(commandArray)
         {

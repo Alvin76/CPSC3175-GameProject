@@ -2,12 +2,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
-using System.Security.Cryptography.X509Certificates;
 
 namespace StarterGame.Commands
 {
     public class GoCommand : Command
     {
+        //public TextWriter pathlog = new StreamWriter("C:\\PathLog.txt");
 
         public GoCommand() : base()
         {
@@ -23,7 +23,7 @@ namespace StarterGame.Commands
                 string[] X =new string[1];
                 X[0] = this.secondWord;
                 File.AppendAllLines("PathLog.txt", X);
-                
+
             }
             else
             {

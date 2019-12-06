@@ -10,7 +10,7 @@ namespace StarterGame
     {
         public Stack journy = new Stack();
         EndOfGame Victory = new EndOfGame();
-        Player player;
+        Characters.Player player;
         Parser parser;
         bool playing;
 
@@ -18,7 +18,8 @@ namespace StarterGame
         {
             playing = false;
             parser = new Parser(new CommandWords());
-            player = new Player(createWorld());
+            player = Characters.Player.getInstance();
+            createWorld();
         }
 
         public Room createWorld()
@@ -33,12 +34,14 @@ namespace StarterGame
             Room universityHall = new Room("in University Hall");
             Room schuster = new Room("in the Schuster Center");
             Room temp1 = new Room("lost room");
-            // add more rooms here around the school 
-            // add post event rooms here too XD 
+            // add more rooms here around the school
+            // add post event rooms here too XD
             // will need to figure out to change when the room go from one event to another
 
             outside.setExit("west", boulevard);
-            //outside.getItems();
+            IGoods.NewNonEquipments tree = new IGoods.NewNonEquipments("Tree", 800f, 1000f, 2, 0, 0, 0, false);
+            outside.addItem(new IGoods.NewNonEquipments("Tree", 800f, 1000f, 2, 0, 0, 0, false));
+            Console.WriteLine(outside.searchRoom());
 
             boulevard.setExit("east", outside);
             boulevard.setExit("south", cctparking);
@@ -84,6 +87,7 @@ namespace StarterGame
             {
                 Console.Write("\n>");
                 Command command = parser.parseCommand(Console.ReadLine());
+                Console.WriteLine();
                 if (command == null)
                 {
                     Console.WriteLine("I don't understand...");

@@ -8,6 +8,7 @@ namespace StarterGame.Characters
 {
     public class Player : IStats
     {
+        Stack rooms = new Stack();
         // singleton for player class
         private static Player player = null;
 
@@ -29,7 +30,7 @@ namespace StarterGame.Characters
         public int CurrentTP { get { return currentTP; } set { currentTP = value; } }
         */
 
-        // player only 
+        // player only
         private int maxHP;
         public int MaxHP { get { return maxHP; } set { maxHP = value; } }
         private int maxMP;
@@ -46,19 +47,24 @@ namespace StarterGame.Characters
         private List<PlayerAbility> abilityList = null;
         private float weightLimit;
         public float WeightLimit { get { return weightLimit; } set { weightLimit = value; } }
+        private Inventory playerInventory;
+        private IGoods.NewEquipments weapon;
+
         //default constructor
         private Player()
         {
             Name = "Ash";
             Level = 1;
             EXP = 0;
-            ATK = DEF = 5;// ATK = 5; DEF = 5;  
+            ATK = DEF = 5;// ATK = 5; DEF = 5;
             MaxHP = 15;
             MaxMP = 10;// MP = 10; TP = 10;
             Alive = true;
             abilityList = new List<PlayerAbility>();
             InCombat = false;
-            WeightLimit = 30f;
+            weapon = null;
+            playerInventory = Inventory.haveOne();
+
         }
 
         // player singleton
@@ -100,7 +106,7 @@ namespace StarterGame.Characters
             }
             return totalLevelUp;
         }
-        
+
         // incomplete LearnAbility method, need to check for level not manually learn ability, unless you want to gain ability point as well
         private void LearnAbility(PlayerAbility newAbility)
         {
@@ -109,7 +115,7 @@ namespace StarterGame.Characters
         }
 
         // attacking a unit
-        // I think this is a command and doesn't belong here and that is one of it's issues 
+        // I think this is a command and doesn't belong here and that is one of it's issues
         /*public void attack(IStats unit)
         {
             Console.WriteLine(Name + " attacks!");
@@ -117,7 +123,7 @@ namespace StarterGame.Characters
         }
 
         // taking damage*/
- 
+
 
         public void takeDamage(int damage)
         {
@@ -155,7 +161,7 @@ namespace StarterGame.Characters
         }
 
         //view skill list
-        private String ability()
+        public String ability()
         {
             String list = "";
             if (abilityList.Count != 0)
@@ -190,7 +196,7 @@ namespace StarterGame.Characters
         }
 
         //checking if ability is available
-        private bool existingAbility(String abilityName)
+        public bool existingAbility(String abilityName)
         {
             bool checking = false;
             if(findAbility(abilityName) != null)
@@ -252,6 +258,10 @@ namespace StarterGame.Characters
             return effect;
         }
 
+        public String whatIsInInventory()
+        {
+            return null; 
+        }
 
         private Room _currentRoom = null;
         public Room currentRoom
@@ -259,6 +269,7 @@ namespace StarterGame.Characters
             get
             {
                 return _currentRoom;
+
             }
             set
             {
@@ -266,9 +277,10 @@ namespace StarterGame.Characters
             }
         }
 
-        public Player(Room room)//, GameOutput output)
+        public void startRoom(Room room)//, GameOutput output)
         {
             _currentRoom = room;
+
         }
 
         //This is to move into each room or how the GoComand works
