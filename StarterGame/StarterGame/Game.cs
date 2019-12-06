@@ -8,6 +8,7 @@ namespace StarterGame
 {
     public class Game
     {
+        EndOfGame Victory = new EndOfGame();
         Characters.Player player;
         Parser parser;
         bool playing;
