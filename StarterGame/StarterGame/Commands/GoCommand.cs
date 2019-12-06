@@ -6,7 +6,7 @@ namespace StarterGame.Commands
 {
     public class GoCommand : Command
     {
-
+        //public TextWriter pathlog = new StreamWriter("C:\\PathLog.txt");
 
         public GoCommand() : base()
         {
@@ -19,20 +19,6 @@ namespace StarterGame.Commands
             if (this.hasSecondWord())
             {
                 player.waltTo(this.secondWord);
-<<<<<<< HEAD
-=======
-                /*
-                try
-                {
-
-                    pathlog.WriteLine(this.name + this.secondWord);
-                    pathlog.Close();
-                }
-                catch(Exception e)
-                {
-                    System.Console.WriteLine("SYSTEM FAILURE CONTACT ");
-                }*/
->>>>>>> 20b3e5a58971bb51ed2997462fdb111c9443fb22
             }
             else
             {

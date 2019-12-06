@@ -32,6 +32,7 @@ namespace StarterGame
         {
             exits = new Dictionary<string, Room>();
             this.tag = tag;
+            itemInRoom = new List<IGoods.IGoods>();
         }
 
         public void setExit(string exitName, Room room)
@@ -92,6 +93,81 @@ namespace StarterGame
             return itemsNames;
         }*/
 
+        // adding item to room
+        public void addItem(IGoods.IGoods item)
+        {
+            itemInRoom.Add(item);
+        }
+
+        // helper method
+        public IGoods.IGoods findItem(String targetItem)
+        {
+            IGoods.IGoods search = null;
+            for (int index = 0; index < itemInRoom.Count; index++)
+            {
+                if (itemInRoom[index].ItemName == targetItem)
+                {
+                    search = itemInRoom[index];
+                }
+            }
+            return search;
+        }
+
+        // destroying item
+        public void destoryItem(String itemName)
+        {
+            IGoods.IGoods target = findItem(itemName);
+            if (target == null)
+            {
+                //place holder for now
+                Console.WriteLine("There is no such item in this room!");
+            }
+            else
+            {
+                if (target.Destroyable)
+                {
+                    if (target.Count > 1)
+                    {
+                        findItem(itemName).Count -= 1;
+                        Console.WriteLine("One of the following item is destroyed!");
+                    }
+                    else
+                    {
+                        Console.WriteLine("One of the item is destoryed!");
+                        itemInRoom.Remove(findItem(itemName));
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("You can't destroy this item!");
+                }
+            }
+        }
+
+        public IGoods.IGoods getItem(String itemName)
+        {
+            IGoods.IGoods target = findItem(itemName);
+            if (target == null)
+            {
+                Console.WriteLine("Item does not exist in inventory!");
+            }
+            else
+            {
+                if (target.Count > 1)
+                {
+                    findItem(itemName).Count -= 1;
+                    Console.WriteLine("One of the " + target.ItemName + " item is used!");
+                }
+                else
+                {
+                    Console.WriteLine("U used " + target.ItemName + " !");
+                    itemInRoom.Remove(findItem(itemName));
+                }
+            }
+            return target;
+        }
+
+        // room search
         public String searchRoom()
         {
             String search = "";
@@ -103,7 +179,14 @@ namespace StarterGame
             {
                 for (int index = 0; index < itemInRoom.Count; index++)
                 {
-                    search += "There is " + itemInRoom[index].ItemName + " in the room!\n";
+                    if (itemInRoom[index].Count == 1)
+                    {
+                        search += "There is " + itemInRoom[index].ItemName + " in the room!\n";
+                    }
+                    else
+                    {
+                        search += "There are " + itemInRoom[index].Count + " " + itemInRoom[index].ItemName + " in this room!\n";
+                    }
                 }
             }
             return search;
