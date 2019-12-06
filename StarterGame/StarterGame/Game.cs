@@ -8,8 +8,7 @@ namespace StarterGame
 {
     public class Game
     {
-        EndOfGame Victory = new EndOfGame();
-        Player player;
+        Characters.Player player;
         Parser parser;
         bool playing;
 
@@ -17,7 +16,8 @@ namespace StarterGame
         {
             playing = false;
             parser = new Parser(new CommandWords());
-            player = new Player(createWorld());
+            player = Characters.Player.getInstance();
+            createWorld();
         }
 
         public Room createWorld()
@@ -32,8 +32,8 @@ namespace StarterGame
             Room universityHall = new Room("in University Hall");
             Room schuster = new Room("in the Schuster Center");
             Room temp1 = new Room("lost room");
-            // add more rooms here around the school 
-            // add post event rooms here too XD 
+            // add more rooms here around the school
+            // add post event rooms here too XD
             // will need to figure out to change when the room go from one event to another
 
             outside.setExit("west", boulevard);
