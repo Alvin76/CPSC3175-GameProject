@@ -1,14 +1,30 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+    "signature": "0c229ff8526515f51effba968b105e9d3c1a33a6"
   },
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v2.1": {
       "StarterGame/1.0.0": {
+        "dependencies": {
+          "DotLiquid": "2.0.314"
+        },
         "runtime": {
           "StarterGame.dll": {}
+        }
+      },
+      "DotLiquid/2.0.314": {
+        "runtime": {
+          "lib/netstandard1.3/DotLiquid.dll": {
+            "assemblyVersion": "2.0.314.0",
+            "fileVersion": "2.0.314.0"
+          }
+        },
+        "resources": {
+          "lib/netstandard1.3/it/DotLiquid.resources.dll": {
+            "locale": "it"
+          }
         }
       }
     }
@@ -18,6 +34,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "DotLiquid/2.0.314": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3yzgQrajOKO2p/O1Dmbxx36DkfCz3Gtu5NC1C7CwWg//oLZ9WXo2D4McM+/jsdU9iVyq7WY12G2VhdErEEyS8g==",
+      "path": "dotliquid/2.0.314",
+      "hashPath": "dotliquid.2.0.314.nupkg.sha512"
     }
   }
 }

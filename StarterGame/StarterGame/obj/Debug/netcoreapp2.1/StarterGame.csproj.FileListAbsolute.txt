@@ -48,3 +48,8 @@ C:\Users\Adam\Dropbox\GitHub\CPSC4125Homework\CPSC3175-GameProject\StarterGame\S
 C:\Users\Adam\Dropbox\GitHub\CPSC4125Homework\CPSC3175-GameProject\StarterGame\StarterGame\obj\Debug\netcoreapp2.1\StarterGame.AssemblyInfo.cs
 C:\Users\Adam\Dropbox\GitHub\CPSC4125Homework\CPSC3175-GameProject\StarterGame\StarterGame\obj\Debug\netcoreapp2.1\StarterGame.dll
 C:\Users\Adam\Dropbox\GitHub\CPSC4125Homework\CPSC3175-GameProject\StarterGame\StarterGame\obj\Debug\netcoreapp2.1\StarterGame.pdb
+C:\Users\Adam\Dropbox\GitHub\CPSC4125Homework\CPSC3175-GameProject\StarterGame\StarterGame\bin\Debug\netcoreapp2.1\StarterGame.deps.json
+C:\Users\Adam\Dropbox\GitHub\CPSC4125Homework\CPSC3175-GameProject\StarterGame\StarterGame\bin\Debug\netcoreapp2.1\StarterGame.runtimeconfig.json
+C:\Users\Adam\Dropbox\GitHub\CPSC4125Homework\CPSC3175-GameProject\StarterGame\StarterGame\bin\Debug\netcoreapp2.1\StarterGame.runtimeconfig.dev.json
+C:\Users\Adam\Dropbox\GitHub\CPSC4125Homework\CPSC3175-GameProject\StarterGame\StarterGame\bin\Debug\netcoreapp2.1\StarterGame.dll
+C:\Users\Adam\Dropbox\GitHub\CPSC4125Homework\CPSC3175-GameProject\StarterGame\StarterGame\bin\Debug\netcoreapp2.1\StarterGame.pdb

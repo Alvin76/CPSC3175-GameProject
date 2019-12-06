@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System;
 using StarterGame.Commands;
+using StarterGame.Characters;
 
 namespace StarterGame
 {
     public class Game
     {
+        EndOfGame Victory = new EndOfGame();
         Player player;
         Parser parser;
         bool playing;
@@ -35,7 +37,7 @@ namespace StarterGame
             // will need to figure out to change when the room go from one event to another
 
             outside.setExit("west", boulevard);
-            outside.getItems();
+            //outside.getItems();
 
             boulevard.setExit("east", outside);
             boulevard.setExit("south", cctparking);
@@ -112,7 +114,14 @@ namespace StarterGame
 
         public string goodbye()
         {
-            return "\nThank you for playing, Goodbye. \n";
+            if (Victory.Win())
+            {
+                return "\n Congrats on wining the game! Thank you for playing, Goodbye. \n";
+            }
+            else
+            {
+                return "\nI'm sorry you did not win. Thank you for playing, Goodbye. \n";
+            }
         }
 
     }

@@ -14,10 +14,6 @@ namespace StarterGame.Commands
                 this.name = "attack";
                 this._Time = +10;
             }
-            else
-            {
-                EndOfGame();
-            }
 
 
         }
