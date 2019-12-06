@@ -13,6 +13,13 @@ namespace StarterGame.Commands
         private string _thirdWord;
         public string thirdWord { get { return _thirdWord; } set { _thirdWord = value; } }
 
+        public int _Time
+        {
+            get { return _Time; }
+            set { _Time = value; }
+        }
+        private int Time;
+
         public Command()
         {
             this.name = "";
@@ -28,7 +35,12 @@ namespace StarterGame.Commands
         {
             return this.thirdWord != null;
         }
-
+        /*
+        public int hasTime()
+        {
+            return _Time;
+        }
+        */
         public abstract bool execute(Characters.Player player);
     }
 }

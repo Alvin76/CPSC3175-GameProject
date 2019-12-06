@@ -9,7 +9,17 @@ namespace StarterGame.Commands
     {
         public AttackCommand() : base()
         {
-            this.name = "attack";
+            if(_Time < 720)
+            {
+                this.name = "attack";
+                this._Time = +10;
+            }
+            else
+            {
+                EndOfGame();
+            }
+
+
         }
         public override bool execute(Characters.Player player)
         {

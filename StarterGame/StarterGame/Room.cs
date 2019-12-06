@@ -55,28 +55,35 @@ namespace StarterGame
             return exitNames;
         }
         //this is going to return items that are avaible in the room
-        /*
+        
         public string getItems()
         {
             string itemsNames = "Item: ";
             Dictionary<string, items>.KeyCollection keys = items.Keys;
             foreach(object items in keys)
             {
-                itemsNames += " " + itemsNames;
+                itemsNames += ", " + itemsNames;
             }
 
             return itemsNames;
-        }*/
+        }
 
         public string description()
         {
             return "You are " + this.tag + ".\n *** " + this.getExits();
         }
         //This for tradeing items 
-        /*
+        
         public string TradeRoom()
         {
-            NotImplementedYet
-        }*/
+            string itemsNames = "Item: ";
+            Dictionary<string, items>.KeyCollection keys = items.Keys;
+            foreach (object items in keys)
+            {
+                itemsNames += ", " + itemsNames;
+            }
+
+            return itemsNames;
+        }
     }
 }

@@ -8,7 +8,11 @@ namespace StarterGame.Commands
     {
         public EquipCommand() : base()
         {
-            this.name = "equip";
+            if (_Time < 720)
+            {
+                this.name = "equip";
+                this._Time = +5;
+            }
         }
         public override bool execute(Characters.Player player)
         {

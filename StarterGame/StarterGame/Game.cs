@@ -35,6 +35,7 @@ namespace StarterGame
             // will need to figure out to change when the room go from one event to another
 
             outside.setExit("west", boulevard);
+            outside.getItems();
 
             boulevard.setExit("east", outside);
             boulevard.setExit("south", cctparking);
