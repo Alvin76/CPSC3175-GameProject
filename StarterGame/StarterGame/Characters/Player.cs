@@ -109,6 +109,7 @@ namespace StarterGame.Characters
         }
 
         // attacking a unit
+        // I think this is a command and doesn't belong here and that is one of it's issues 
         public void attack(IStats unit)
         {
             Console.WriteLine(Name + " attacks!");
