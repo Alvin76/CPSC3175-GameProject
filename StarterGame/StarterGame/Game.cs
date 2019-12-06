@@ -43,7 +43,7 @@ namespace StarterGame
             player.addToInventory(new IGoods.NewNonEquipments("Paper", 0.1f, 0.002f, 1, 0, 0, true));
             player.addToInventory(new IGoods.NewNonEquipments("Chocolate", 4f, 2f, 2, 2, 3, true));
             player.addToInventory(new IGoods.NewEquipments("Binder", 40f, 4f, 1, 2, 2, 10, true, true));
-            
+
 
             outside.setExit("west", boulevard);
             outside.addItem(new IGoods.NewNonEquipments("Tree", 800f, 1000f, 2, 0, 0, false));
@@ -108,6 +108,7 @@ namespace StarterGame
             {
                 Console.Write("\n>");
                 Command command = parser.parseCommand(Console.ReadLine());
+                Console.WriteLine();
                 if (command == null)
                 {
                     Console.WriteLine("I don't understand...");
