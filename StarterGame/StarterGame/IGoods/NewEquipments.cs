@@ -18,8 +18,9 @@ namespace StarterGame.IGoods
         public int AttackValue;
         //public int DefenseValue;
         public int Durability { get; set; }
+        public bool Destroyable { get; set; }
 
-        public NewEquipments(String ItemName, float Volumn, float Weight, int Count, float Worth, int AttackValue, int Durability)
+        public NewEquipments(String ItemName, float Volumn, float Weight, int Count, float Worth, int AttackValue, int Durability, bool Destroyable)
         {
             this.ItemName = ItemName;
             this.Volumn = Volumn;
@@ -30,6 +31,7 @@ namespace StarterGame.IGoods
             this.AttackValue = AttackValue;
             //this.DefenseValue = DefenseValue;
             this.Durability = Durability;
+            this.Destroyable = Destroyable;
         }
     }
 }

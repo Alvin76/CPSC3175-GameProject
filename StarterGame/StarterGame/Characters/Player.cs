@@ -161,7 +161,7 @@ namespace StarterGame.Characters
         }
 
         //view skill list
-        private String ability()
+        public String ability()
         {
             String list = "";
             if (abilityList.Count != 0)
@@ -196,7 +196,7 @@ namespace StarterGame.Characters
         }
 
         //checking if ability is available
-        private bool existingAbility(String abilityName)
+        public bool existingAbility(String abilityName)
         {
             bool checking = false;
             if(findAbility(abilityName) != null)
@@ -258,6 +258,10 @@ namespace StarterGame.Characters
             return effect;
         }
 
+        public String whatIsInInventory()
+        {
+            return 
+        }
 
         private Room _currentRoom = null;
         public Room currentRoom

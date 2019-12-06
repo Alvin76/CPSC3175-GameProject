@@ -38,7 +38,9 @@ namespace StarterGame
             // will need to figure out to change when the room go from one event to another
 
             outside.setExit("west", boulevard);
-            //outside.getItems();
+            IGoods.NewNonEquipments tree = new IGoods.NewNonEquipments("Tree", 800f, 1000f, 2, 0, 0, 0, false);
+            outside.addItem(new IGoods.NewNonEquipments("Tree", 800f, 1000f, 2, 0, 0, 0, false));
+            Console.WriteLine(outside.searchRoom());
 
             boulevard.setExit("east", outside);
             boulevard.setExit("south", cctparking);
@@ -84,6 +86,7 @@ namespace StarterGame
             {
                 Console.Write("\n>");
                 Command command = parser.parseCommand(Console.ReadLine());
+                Console.WriteLine()
                 if (command == null)
                 {
                     Console.WriteLine("I don't understand...");

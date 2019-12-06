@@ -6,7 +6,7 @@ namespace StarterGame.Commands
 {
     public class GoCommand : Command
     {
-        public TextWriter pathlog = new StreamWriter("C:\\PathLog.txt");
+        //public TextWriter pathlog = new StreamWriter("C:\\PathLog.txt");
 
         public GoCommand() : base()
         {

@@ -88,6 +88,7 @@ namespace StarterGame
             }
         }
 
+        // using item
         public void useItem(String itemName)
         {
             IGoods.IGoods target = findItem(itemName);
@@ -98,17 +99,43 @@ namespace StarterGame
             }
             else
             {
-                currentWeight -= target.Weight;
-                currentVolumn -= target.Volumn;
-                if(target.Count > 1)
+                if (target.Destroyable)
                 {
-                    findItem(itemName).Count -= 1;
+                    if (target.Count > 1)
+                    {
+                        currentWeight -= target.Weight;
+                        currentVolumn -= target.Volumn;
+                        findItem(itemName).Count -= 1;
+                        Console.WriteLine("One of the "+ target.ItemName +" item is used!");
+                    }
+                    else
+                    {
+                        Console.WriteLine("U used " + target.ItemName + " !");
+                        inventory.Remove(findItem(itemName));
+                    }
                 }
                 else
                 {
-                    inventory.Remove(target);
+                    Console.WriteLine("You can't use this item!");
                 }
             }
+        }
+
+        public String inInventory()
+        {
+            String temp = "";
+            if(inventory.Count == 0)
+            {
+                temp = "There is nothing in inventory!";
+            }
+            else
+            {
+                for(int index = 0; index < inventory.Count; index++)
+                {
+
+                }
+            }
+            return temp;
         }
     }
 }
