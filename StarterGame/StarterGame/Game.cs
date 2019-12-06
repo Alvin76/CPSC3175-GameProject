@@ -7,7 +7,7 @@ namespace StarterGame
 {
     public class Game
     {
-        Player player;
+        Characters.Player player;
         Parser parser;
         bool playing;
 
@@ -15,7 +15,8 @@ namespace StarterGame
         {
             playing = false;
             parser = new Parser(new CommandWords());
-            player = new Player(createWorld());
+            player = Characters.Player.getInstance();
+            createWorld();
         }
 
         public Room createWorld()

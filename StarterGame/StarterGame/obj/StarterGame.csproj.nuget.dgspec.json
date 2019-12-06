@@ -1,26 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Adam\\Dropbox\\GitHub\\CPSC4125Homework\\CPSC3175-GameProject\\StarterGame\\StarterGame\\StarterGame.csproj": {}
+    "F:\\VS projects\\GameProject\\CPSC3175-GameProject\\StarterGame\\StarterGame\\StarterGame.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Adam\\Dropbox\\GitHub\\CPSC4125Homework\\CPSC3175-GameProject\\StarterGame\\StarterGame\\StarterGame.csproj": {
+    "F:\\VS projects\\GameProject\\CPSC3175-GameProject\\StarterGame\\StarterGame\\StarterGame.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Adam\\Dropbox\\GitHub\\CPSC4125Homework\\CPSC3175-GameProject\\StarterGame\\StarterGame\\StarterGame.csproj",
+        "projectUniqueName": "F:\\VS projects\\GameProject\\CPSC3175-GameProject\\StarterGame\\StarterGame\\StarterGame.csproj",
         "projectName": "StarterGame",
-        "projectPath": "C:\\Users\\Adam\\Dropbox\\GitHub\\CPSC4125Homework\\CPSC3175-GameProject\\StarterGame\\StarterGame\\StarterGame.csproj",
-        "packagesPath": "C:\\Users\\Adam\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Adam\\Dropbox\\GitHub\\CPSC4125Homework\\CPSC3175-GameProject\\StarterGame\\StarterGame\\obj\\",
+        "projectPath": "F:\\VS projects\\GameProject\\CPSC3175-GameProject\\StarterGame\\StarterGame\\StarterGame.csproj",
+        "packagesPath": "C:\\Users\\Konoko\\.nuget\\packages\\",
+        "outputPath": "F:\\VS projects\\GameProject\\CPSC3175-GameProject\\StarterGame\\StarterGame\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "D:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Adam\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\Konoko\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.1"
