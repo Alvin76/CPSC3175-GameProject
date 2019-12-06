@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System;
 using StarterGame.Commands;
+using System.IO;
 
 namespace StarterGame
 {
     public class CommandWords
     {
+        //private TextWriter pathlog = new StreamWriter("C:\\PathLog.txt");
         // @R I think this is used to accesses commands and place them in
         Dictionary<string, Command> commands;
         private static Command[] commandArray = { new GoCommand(),
