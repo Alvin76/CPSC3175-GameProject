@@ -20,15 +20,17 @@ namespace StarterGame.IGoods
         public float Worth { get { return worth; } set { worth = value; } }
         private int hpRecovery;
         public int HPRecovery { get { return hpRecovery; } set { hpRecovery = value; } }
-        private int mpRecovery;
-        public int MPRecovery { get { return mpRecovery; } set { mpRecovery = value; } }
+        //private int mpRecovery;
+        //public int MPRecovery { get { return mpRecovery; } set { mpRecovery = value; } }
         private bool destroyable;
         public bool Destroyable { get { return destroyable; } set {destroyable = value; } }
+        private bool useable;
+        public bool Useable { get { return useable; } set { useable = value; } }
         /*
         private int tpRecovery;
         public int TPRecovery { get { return tpRecovery; } set { tpRecovery = value; } }
         */
-        public NewNonEquipments(String ItemName, float Volumn, float Weight, int Count, float Worth, int HPRecovery, int MPRecovery, bool Destroyable)
+        public NewNonEquipments(String ItemName, float Volumn, float Weight, int Count, float Worth, int HPRecovery, bool Destroyable)
         {
             this.ItemName = ItemName;
             this.Volumn = Volumn;
@@ -36,8 +38,12 @@ namespace StarterGame.IGoods
             this.Count = Count;
             this.Worth = Worth;
             this.HPRecovery = HPRecovery;
-            this.MPRecovery = MPRecovery;
+            //this.MPRecovery = MPRecovery;
             this.Destroyable = Destroyable;
+            if(HPRecovery > 0)
+            {
+                Useable = true;
+            }
             //this.TPRecovery = TPRecovery;
         }
     }

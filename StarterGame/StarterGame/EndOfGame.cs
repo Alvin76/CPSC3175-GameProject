@@ -8,6 +8,7 @@ namespace StarterGame
 {
     public class EndOfGame
     {
+        private static EndOfGame clearGame = null;
         private bool _VictoryCondition1;
         public bool VictoryCondition1
         {
@@ -23,14 +24,19 @@ namespace StarterGame
             set => _VictoryCondition2 = value;
         }
 
-        public EndOfGame(bool victoryCondition1, bool victoryCondition2)
+        private EndOfGame()
         {
-            _VictoryCondition1 = victoryCondition1;
-            _VictoryCondition2 = victoryCondition2;
+            VictoryCondition1 = false;
+            VictoryCondition2 = false;
         }
 
-        public EndOfGame()
+        public static EndOfGame oneEnd()
         {
+            if(clearGame == null)
+            {
+                clearGame = new EndOfGame();
+            }
+            return clearGame;
         }
 
         public bool Win()

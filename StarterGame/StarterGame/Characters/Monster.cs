@@ -35,7 +35,7 @@ namespace StarterGame.Characters
         int[] DEFVals = { 1, 2, 4, 6, 9, 11, 20 };
         int[] EXPVals = { 2, 3, 4, 6, 9, 12, 50 };
         int[] GoldVals = { 1, 3, 5, 7, 9, 11, 30 };
-        int[] LevelVals = { 1, 2, 3, 5, 6, 7, 10};
+        int[] LevelVals = { 1, 2, 3, 5, 6, 7, 9};
         
         public Monster(int result)
         {

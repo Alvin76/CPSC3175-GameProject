@@ -18,7 +18,7 @@ namespace StarterGame.Characters
         private int atk;
         public int ATK { get { return atk; } set { atk = value; } }
         private int def;
-        public int DEF { get { return DEF; } set { def = value; } }
+        public int DEF { get { return def; } set { def = value; } }
         private int currentHP;
         public int CurrentHP { get { return currentHP; } set { currentHP = value; } }
         private bool alive;
@@ -49,6 +49,7 @@ namespace StarterGame.Characters
         public float WeightLimit { get { return weightLimit; } set { weightLimit = value; } }
         private Inventory playerInventory;
         private IGoods.NewEquipments weapon;
+        private EndOfGame endGame;
 
         //default constructor
         private Player()
@@ -57,14 +58,14 @@ namespace StarterGame.Characters
             Level = 1;
             EXP = 0;
             ATK = DEF = 5;// ATK = 5; DEF = 5;
-            MaxHP = 15;
-            MaxMP = 10;// MP = 10; TP = 10;
+            MaxHP = CurrentHP = 15;
+            MaxMP = CurrentMP =  10;// MP = 10; TP = 10;
             Alive = true;
             abilityList = new List<PlayerAbility>();
             InCombat = false;
             weapon = null;
             playerInventory = Inventory.haveOne();
-
+            endGame = EndOfGame.oneEnd();
         }
 
         // player singleton
@@ -83,6 +84,10 @@ namespace StarterGame.Characters
             EXP += newExp;
             int totalLevelUp = levelUp(EXP); // checking level upif there is any
             Console.Write(Name + " level up " + totalLevelUp + " times!");
+            if (Level > 9)
+            {
+                endGame.VictoryCondition2 = true;
+            }
         }
 
         // leveling up
@@ -121,10 +126,8 @@ namespace StarterGame.Characters
             Console.WriteLine(Name + " attacks!");
             unit.takeDamage(ATK);
         }
-
-        // taking damage*/
-
-
+        */
+        // taking damage
         public void takeDamage(int damage)
         {
             int defense = DEF / 2;
@@ -148,8 +151,17 @@ namespace StarterGame.Characters
             }
         }
 
+        public void heal(int healAmount)
+        {
+            player.CurrentHP += healAmount;
+            if(CurrentHP > MaxHP)
+            {
+                CurrentHP = MaxHP;
+            }
+        }
+
         //checking if character is in combat or not
-        private bool checkCombat()
+        public bool checkCombat()
         {
             return InCombat;
         }
@@ -160,8 +172,9 @@ namespace StarterGame.Characters
             InCombat = state;
         }
 
+        /*
         //view skill list
-        public String ability()
+        public String knownAbility()
         {
             String list = "";
             if (abilityList.Count != 0)
@@ -176,7 +189,7 @@ namespace StarterGame.Characters
             }
             else
             {
-                list = "There is no known abilities";
+                list = "There is no known abilities!";
             }
             return list;
         }
@@ -256,11 +269,77 @@ namespace StarterGame.Characters
                 Console.WriteLine("The following abillity does not exist!");
             }
             return effect;
+        }*/
+
+        public void addToInventory(IGoods.IGoods newItem)
+        {
+            playerInventory.addItem(newItem);
         }
 
+        // print out what is in your inventory
         public String whatIsInInventory()
         {
-            return null; 
+            return playerInventory.inInventory();
+        }
+
+        //using an item
+        public String usingItem(String itemName)
+        {
+            String temp = "";
+            IGoods.IGoods targetItem = playerInventory.useItem(itemName);
+            if(targetItem != null)
+            {
+                IGoods.NewNonEquipments useItem = (IGoods.NewNonEquipments)targetItem;
+                player.heal(useItem.HPRecovery);
+            }
+            return temp;
+        }
+
+        public String eqiupWeapon(String itemName)
+        {
+            String temp = "";
+            IGoods.IGoods targetItem = playerInventory.equipItem(itemName);
+            if(targetItem != null)
+            {
+                try
+                {
+                    if (weapon == null)
+                    {
+                        weapon = (IGoods.NewEquipments)targetItem;
+                    }
+                    else
+                    {
+                        playerInventory.addItem(weapon);
+                        weapon = (IGoods.NewEquipments)targetItem;
+                    }
+                }
+                catch(InvalidCastException e)
+                {
+                    temp = "You can not equip this item!";
+                }
+            }
+            return temp;
+        }
+
+        // print character status
+        public String characterStatus()
+        {
+            String Status = "";
+            Status += "Level: " + Level + "\n";
+            Status += CurrentHP + "/" + MaxHP + "\n";
+            //Status += CurrentMP + "/" + MaxMP + "\n";
+            Status += "Attack: " + ATK + "\n";
+            Status += "Defense: " + DEF + "\n";
+            //Status += knownAbility();
+            if(weapon != null)
+            {
+                Status += "Weapon: " + weapon.ItemName + "\n";
+            }
+            else
+            {
+                Status += "No held wepaon";
+            }
+            return Status;
         }
 
         private Room _currentRoom = null;
@@ -274,6 +353,7 @@ namespace StarterGame.Characters
             set
             {
                 _currentRoom = value;
+                endGame.VictoryCondition1 = _currentRoom.VictoryCondition; // victory condition 1
             }
         }
 

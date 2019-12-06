@@ -16,6 +16,7 @@ namespace StarterGame.IGoods
         int Count { get; set; }
         float Worth { get; set; }
         bool Destroyable { get; set; }
+        bool Useable { get; set; }
         //ItemType Type { get; set; }
     }
 }
