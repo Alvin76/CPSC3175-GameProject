@@ -49,6 +49,7 @@ namespace StarterGame.Characters
         public float WeightLimit { get { return weightLimit; } set { weightLimit = value; } }
         private Inventory playerInventory;
         private IGoods.NewEquipments weapon;
+        private EndOfGame endGame;
 
         //default constructor
         private Player()
@@ -64,7 +65,7 @@ namespace StarterGame.Characters
             InCombat = false;
             weapon = null;
             playerInventory = Inventory.haveOne();
-
+            endGame = EndOfGame.oneEnd();
         }
 
         // player singleton
@@ -83,6 +84,10 @@ namespace StarterGame.Characters
             EXP += newExp;
             int totalLevelUp = levelUp(EXP); // checking level upif there is any
             Console.Write(Name + " level up " + totalLevelUp + " times!");
+            if (Level > 9)
+            {
+                endGame.VictoryCondition2 = true;
+            }
         }
 
         // leveling up
@@ -121,10 +126,8 @@ namespace StarterGame.Characters
             Console.WriteLine(Name + " attacks!");
             unit.takeDamage(ATK);
         }
-
-        // taking damage*/
-
-
+        */
+        // taking damage
         public void takeDamage(int damage)
         {
             int defense = DEF / 2;
@@ -350,6 +353,7 @@ namespace StarterGame.Characters
             set
             {
                 _currentRoom = value;
+                endGame.VictoryCondition1 = _currentRoom.VictoryCondition; // victory condition 1
             }
         }
 

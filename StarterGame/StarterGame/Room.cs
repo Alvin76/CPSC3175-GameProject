@@ -23,6 +23,13 @@ namespace StarterGame
             }
         }
 
+        
+        private bool victoryCondition;
+        public bool VictoryCondition { get { return victoryCondition; } set { victoryCondition = value; } }
+        private bool encounter;
+        public bool Encounter { get { return encounter; } set { encounter = value; } }
+        private Characters.Player player;
+
         public Room() : this("No Tag")
         {
 
@@ -33,6 +40,9 @@ namespace StarterGame
             exits = new Dictionary<string, Room>();
             this.tag = tag;
             itemInRoom = new List<IGoods.IGoods>();
+            VictoryCondition = false;
+            Encounter = false;
+            player = Characters.Player.getInstance();
         }
 
         public void setExit(string exitName, Room room)
@@ -192,6 +202,27 @@ namespace StarterGame
             }
             return search;
         }
+        /*
+        public void monsterEncounter()
+        {
+            if(Encounter)
+            {
+                Random rand = new Random();
+                int monsterIndex = rand.Next(8);
+                Characters.Monster newMonster = new Characters.Monster(monsterIndex);
+                bool battle = true;
+                while(player.Level < newMonster.EncounterLevel)
+                {
+                    monsterIndex = rand.Next(8);
+                    newMonster = new Characters.Monster(monsterIndex);
+                }
+
+            }
+            else
+            {
+                Console.WriteLine("There is nothing here.");
+            }
+        }*/
     }
     
 }
