@@ -8,6 +8,7 @@ namespace StarterGame
 {
     public class Game
     {
+        public Stack journy = new Stack();
         EndOfGame Victory = new EndOfGame();
         Player player;
         Parser parser;
@@ -93,7 +94,7 @@ namespace StarterGame
                 }
             }
         }
-
+        
 
         public void start()
         {

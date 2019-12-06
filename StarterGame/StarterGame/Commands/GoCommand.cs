@@ -1,5 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.IO;
+using System.Security.Cryptography.X509Certificates;
 
 namespace StarterGame.Commands
 {
@@ -17,6 +20,10 @@ namespace StarterGame.Commands
             if (this.hasSecondWord())
             {
                 player.waltTo(this.secondWord);
+                string[] X =new string[1];
+                X[0] = this.secondWord;
+                File.AppendAllLines("PathLog.txt", X);
+                
             }
             else
             {
