@@ -18,7 +18,7 @@ namespace StarterGame
             playing = false;
             parser = new Parser(new CommandWords());
             player = Characters.Player.getInstance();
-            player.startRoom(createWorld());
+            createWorld();
         }
 
         public Room createWorld()
