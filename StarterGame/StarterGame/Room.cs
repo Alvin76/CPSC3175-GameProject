@@ -91,6 +91,23 @@ namespace StarterGame
 
             return itemsNames;
         }*/
+
+        public String searchRoom()
+        {
+            String search = "";
+            if(itemInRoom.Count == 0)
+            {
+                search = "There is nothing in the room!";
+            }
+            else
+            {
+                for (int index = 0; index < itemInRoom.Count; index++)
+                {
+                    search += "There is " + itemInRoom[index].ItemName + " in the room!\n";
+                }
+            }
+            return search;
+        }
     }
     
 }

@@ -19,6 +19,7 @@ namespace StarterGame.Commands
             if (this.hasSecondWord())
             {
                 player.waltTo(this.secondWord);
+                /*
                 try
                 {
 
@@ -28,7 +29,7 @@ namespace StarterGame.Commands
                 catch(Exception e)
                 {
                     System.Console.WriteLine("SYSTEM FAILURE CONTACT ");
-                }
+                }*/
             }
             else
             {
