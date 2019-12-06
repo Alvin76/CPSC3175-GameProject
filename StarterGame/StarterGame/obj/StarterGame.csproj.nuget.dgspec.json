@@ -1,28 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Adam\\Dropbox\\GitHub\\CPSC3175-GameProject\\StarterGame\\StarterGame\\StarterGame.csproj": {}
+    "C:\\Users\\Adam\\Dropbox\\GitHub\\CPSC4125Homework\\CPSC3175-GameProject\\StarterGame\\StarterGame\\StarterGame.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Adam\\Dropbox\\GitHub\\CPSC3175-GameProject\\StarterGame\\StarterGame\\StarterGame.csproj": {
+    "C:\\Users\\Adam\\Dropbox\\GitHub\\CPSC4125Homework\\CPSC3175-GameProject\\StarterGame\\StarterGame\\StarterGame.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Adam\\Dropbox\\GitHub\\CPSC3175-GameProject\\StarterGame\\StarterGame\\StarterGame.csproj",
+        "projectUniqueName": "C:\\Users\\Adam\\Dropbox\\GitHub\\CPSC4125Homework\\CPSC3175-GameProject\\StarterGame\\StarterGame\\StarterGame.csproj",
         "projectName": "StarterGame",
-        "projectPath": "C:\\Users\\Adam\\Dropbox\\GitHub\\CPSC3175-GameProject\\StarterGame\\StarterGame\\StarterGame.csproj",
+        "projectPath": "C:\\Users\\Adam\\Dropbox\\GitHub\\CPSC4125Homework\\CPSC3175-GameProject\\StarterGame\\StarterGame\\StarterGame.csproj",
         "packagesPath": "C:\\Users\\Adam\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Adam\\Dropbox\\GitHub\\CPSC3175-GameProject\\StarterGame\\StarterGame\\obj\\",
+        "outputPath": "C:\\Users\\Adam\\Dropbox\\GitHub\\CPSC4125Homework\\CPSC3175-GameProject\\StarterGame\\StarterGame\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
+          "D:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Adam\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Adam\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.1"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -39,6 +43,10 @@
       "frameworks": {
         "netcoreapp2.1": {
           "dependencies": {
+            "DotLiquid": {
+              "target": "Package",
+              "version": "[2.0.314, )"
+            },
             "Microsoft.NETCore.App": {
               "target": "Package",
               "version": "[2.1.0, )",

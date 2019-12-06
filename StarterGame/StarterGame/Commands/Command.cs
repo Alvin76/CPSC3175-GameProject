@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System;
 
-namespace StarterGame
+namespace StarterGame.Commands
 {
     public abstract class Command
     {
@@ -28,7 +28,12 @@ namespace StarterGame
         {
             return this.thirdWord != null;
         }
-
-        public abstract bool execute(Player player);
+        /*
+        public int hasTime()
+        {
+            return _Time;
+        }
+        */
+        public abstract bool execute(Characters.Player player);
     }
 }

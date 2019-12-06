@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 
-namespace StarterGame
+namespace StarterGame.Commands
 {
     public class HelpCommand : Command
     {
@@ -18,7 +18,7 @@ namespace StarterGame
         }
 
         override
-        public bool execute(Player player)
+        public bool execute(Characters.Player player)
         {
             if (this.hasSecondWord())
             {

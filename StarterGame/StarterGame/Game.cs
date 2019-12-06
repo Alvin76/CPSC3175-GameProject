@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System;
+using StarterGame.Commands;
+using StarterGame.Characters;
 
 namespace StarterGame
 {
     public class Game
     {
+        EndOfGame Victory = new EndOfGame();
         Player player;
         Parser parser;
         bool playing;
@@ -28,10 +31,13 @@ namespace StarterGame
             Room theGreen = new Room("in the green in from of Schuster Center");
             Room universityHall = new Room("in University Hall");
             Room schuster = new Room("in the Schuster Center");
-            //I want to add more rooms here for the player to have a school class scedule 
-            //I want to add most of the rooms back with them damaged from the fallout.  
+            Room temp1 = new Room("lost room");
+            // add more rooms here around the school 
+            // add post event rooms here too XD 
+            // will need to figure out to change when the room go from one event to another
 
             outside.setExit("west", boulevard);
+            //outside.getItems();
 
             boulevard.setExit("east", outside);
             boulevard.setExit("south", cctparking);
@@ -108,7 +114,14 @@ namespace StarterGame
 
         public string goodbye()
         {
-            return "\nThank you for playing, Goodbye. \n";
+            if (Victory.Win())
+            {
+                return "\n Congrats on wining the game! Thank you for playing, Goodbye. \n";
+            }
+            else
+            {
+                return "\nI'm sorry you did not win. Thank you for playing, Goodbye. \n";
+            }
         }
 
     }

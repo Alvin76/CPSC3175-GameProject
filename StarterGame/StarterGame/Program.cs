@@ -6,10 +6,11 @@ namespace StarterGame
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to Etius State Uneversity Simpulation!");
+            Console.WriteLine("~~~Welcome Schuster dawn!~~~");
+            Console.WriteLine("Make sure you attend class on time");
             Game game = new Game();
             game.start();
-            game.play();
+            game.play(); // play Starts a new instance 
             game.end();
         }
     }

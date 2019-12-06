@@ -2,6 +2,20 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.1": {
+      "DotLiquid/2.0.314": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.3/DotLiquid.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/DotLiquid.dll": {}
+        },
+        "resource": {
+          "lib/netstandard1.3/it/DotLiquid.resources.dll": {
+            "locale": "it"
+          }
+        }
+      },
       "Microsoft.NETCore.App/2.1.0": {
         "type": "package",
         "dependencies": {
@@ -211,6 +225,25 @@
     }
   },
   "libraries": {
+    "DotLiquid/2.0.314": {
+      "sha512": "3yzgQrajOKO2p/O1Dmbxx36DkfCz3Gtu5NC1C7CwWg//oLZ9WXo2D4McM+/jsdU9iVyq7WY12G2VhdErEEyS8g==",
+      "type": "package",
+      "path": "dotliquid/2.0.314",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "dotliquid.2.0.314.nupkg.sha512",
+        "dotliquid.nuspec",
+        "lib/net45/DotLiquid.dll",
+        "lib/net45/DotLiquid.xml",
+        "lib/net45/it/DotLiquid.resources.dll",
+        "lib/netstandard1.3/DotLiquid.dll",
+        "lib/netstandard1.3/DotLiquid.xml",
+        "lib/netstandard1.3/it/DotLiquid.resources.dll",
+        "readme.txt"
+      ]
+    },
     "Microsoft.NETCore.App/2.1.0": {
       "sha512": "JNHhG+j5eIhG26+H721IDmwswGUznTwwSuJMFe/08h0X2YarHvA15sVAvUkA/2Sp3W0ENNm48t+J7KTPRqEpfA==",
       "type": "package",
@@ -683,32 +716,38 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
+      "DotLiquid >= 2.0.314",
       "Microsoft.NETCore.App >= 2.1.0"
     ]
   },
   "packageFolders": {
     "C:\\Users\\Adam\\.nuget\\packages\\": {},
+    "D:\\Microsoft\\Xamarin\\NuGet\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Adam\\Dropbox\\GitHub\\CPSC3175-GameProject\\StarterGame\\StarterGame\\StarterGame.csproj",
+      "projectUniqueName": "C:\\Users\\Adam\\Dropbox\\GitHub\\CPSC4125Homework\\CPSC3175-GameProject\\StarterGame\\StarterGame\\StarterGame.csproj",
       "projectName": "StarterGame",
-      "projectPath": "C:\\Users\\Adam\\Dropbox\\GitHub\\CPSC3175-GameProject\\StarterGame\\StarterGame\\StarterGame.csproj",
+      "projectPath": "C:\\Users\\Adam\\Dropbox\\GitHub\\CPSC4125Homework\\CPSC3175-GameProject\\StarterGame\\StarterGame\\StarterGame.csproj",
       "packagesPath": "C:\\Users\\Adam\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Adam\\Dropbox\\GitHub\\CPSC3175-GameProject\\StarterGame\\StarterGame\\obj\\",
+      "outputPath": "C:\\Users\\Adam\\Dropbox\\GitHub\\CPSC4125Homework\\CPSC3175-GameProject\\StarterGame\\StarterGame\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
+        "D:\\Microsoft\\Xamarin\\NuGet\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Adam\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Adam\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.1"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -725,6 +764,10 @@
     "frameworks": {
       "netcoreapp2.1": {
         "dependencies": {
+          "DotLiquid": {
+            "target": "Package",
+            "version": "[2.0.314, )"
+          },
           "Microsoft.NETCore.App": {
             "target": "Package",
             "version": "[2.1.0, )",
