@@ -9,6 +9,7 @@ namespace StarterGame
     public class Room
     {
         private Dictionary<string, Room> exits;
+        private List<IGoods.IGoods> itemInRoom;
         private string _tag;
         public string tag
         {

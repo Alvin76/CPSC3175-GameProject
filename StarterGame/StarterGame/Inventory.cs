@@ -8,7 +8,7 @@ namespace StarterGame
     class Inventory
     {
         private static Inventory playerInventory = null;
-        public Dictionary<String, Items> inventory;
+        public List<IGoods.IGoods> inventory;
         private static float maxVolumn; // m^3
         private static float maxWeight; // kg
         private float currentVolumn;
@@ -16,9 +16,9 @@ namespace StarterGame
 
         private Inventory()
         {
-            inventory = new Dictionary<string, Items>();
-            maxVolumn = 250f;
-            maxWeight = 25f;
+            inventory = new List<IGoods.IGoods>();
+            maxVolumn = 200f;
+            maxWeight = 20f;
             currentVolumn = 0f;
             currentWeight = 0f;
         }
@@ -29,16 +29,15 @@ namespace StarterGame
             {
                 playerInventory = new Inventory();
             }
-
             return playerInventory;
         }
 
         // adding item
-        public void addItem(Items newItem)
+        public void addItem(IGoods.IGoods newItem)
         {
             if(currentWeight + newItem.Weight <= maxWeight && currentVolumn + newItem.Volumn <= maxVolumn)
             {
-                inventory.Add(newItem.ItemName, newItem);
+                inventory.Add(newItem);
                 currentWeight += newItem.Weight;
                 currentVolumn += newItem.Volumn;
             }
@@ -53,23 +52,22 @@ namespace StarterGame
         }
 
         // helper method
-        public Items findItem(String targetItem)
+        public IGoods.IGoods findItem(String targetItem)
         {
-            Items search;
-            if(inventory.ContainsKey(targetItem))
+            IGoods.IGoods search = null ;
+            for(int index = 0; index < inventory.Count; index++)
             {
-                search = inventory[targetItem];
-            }
-            else
-            {
-                search = null;
+                if(inventory[index].ItemName == targetItem)
+                {
+                    search = inventory[index];
+                }
             }
             return search;
         }
 
         public void discardItem(String itemName)
         {
-            Items target = findItem(itemName);
+            IGoods.IGoods target = findItem(itemName);
             if(target == null)
             {
                 //place holder for now
@@ -79,13 +77,20 @@ namespace StarterGame
             {
                 currentWeight -= target.Weight;
                 currentVolumn -= target.Volumn;
-                inventory.Remove(target.ItemName);
+                if (target.Count > 1)
+                {
+                    findItem(itemName).Count -= 1;
+                }
+                else
+                {
+                    inventory.Remove(target);
+                }
             }
         }
 
         public void useItem(String itemName)
         {
-            Items target = findItem(itemName);
+            IGoods.IGoods target = findItem(itemName);
             if (target == null)
             {
                 //place holder for now
@@ -95,8 +100,14 @@ namespace StarterGame
             {
                 currentWeight -= target.Weight;
                 currentVolumn -= target.Volumn;
-                // need to finish setting up consumables
-                inventory.Remove(target.ItemName);
+                if(target.Count > 1)
+                {
+                    findItem(itemName).Count -= 1;
+                }
+                else
+                {
+                    inventory.Remove(target);
+                }
             }
         }
     }

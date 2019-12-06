@@ -25,10 +25,11 @@ namespace StarterGame.IGoods
         public int HPRecovery { get { return hpRecovery; } set { hpRecovery = value; } }
         private int mpRecovery;
         public int MPRecovery { get { return mpRecovery; } set { mpRecovery = value; } }
+        /*
         private int tpRecovery;
         public int TPRecovery { get { return tpRecovery; } set { tpRecovery = value; } }
-
-        public NewNonEquipments(String ItemName, float Volumn, float Weight, int Count, float Worth, IfKey Key, int HPRecovery, int MPRecovery, int TPRecovery)
+        */
+        public NewNonEquipments(String ItemName, float Volumn, float Weight, int Count, float Worth, IfKey Key, int HPRecovery, int MPRecovery)
         {
             this.ItemName = ItemName;
             this.Volumn = Volumn;
@@ -38,7 +39,7 @@ namespace StarterGame.IGoods
             this.Key = Key;
             this.HPRecovery = HPRecovery;
             this.MPRecovery = MPRecovery;
-            this.TPRecovery = TPRecovery;
+            //this.TPRecovery = TPRecovery;
         }
     }
 }

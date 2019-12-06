@@ -46,6 +46,9 @@ namespace StarterGame.Characters
         private List<PlayerAbility> abilityList = null;
         private float weightLimit;
         public float WeightLimit { get { return weightLimit; } set { weightLimit = value; } }
+        private Inventory playerInventory;
+        private IGoods.NewEquipments weapon;
+        
         //default constructor
         private Player()
         {
@@ -58,7 +61,9 @@ namespace StarterGame.Characters
             Alive = true;
             abilityList = new List<PlayerAbility>();
             InCombat = false;
-            WeightLimit = 30f;
+            weapon = null;
+            playerInventory = Inventory.haveOne();
+
         }
 
         // player singleton
@@ -252,6 +257,7 @@ namespace StarterGame.Characters
             return effect;
         }
 
+        
 
         private Room _currentRoom = null;
         public Room currentRoom
