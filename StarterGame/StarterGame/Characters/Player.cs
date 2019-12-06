@@ -273,7 +273,7 @@ namespace StarterGame.Characters
             }
         }
 
-        public Player(Room room)//, GameOutput output)
+        public void startRoom(Room room)//, GameOutput output)
         {
             _currentRoom = room;
 
