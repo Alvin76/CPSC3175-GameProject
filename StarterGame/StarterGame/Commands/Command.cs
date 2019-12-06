@@ -28,7 +28,12 @@ namespace StarterGame.Commands
         {
             return this.thirdWord != null;
         }
-
+        /*
+        public int hasTime()
+        {
+            return _Time;
+        }
+        */
         public abstract bool execute(Characters.Player player);
     }
 }

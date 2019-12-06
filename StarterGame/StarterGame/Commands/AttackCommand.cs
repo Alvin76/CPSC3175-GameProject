@@ -10,6 +10,9 @@ namespace StarterGame.Commands
         public AttackCommand() : base()
         {
             this.name = "attack";
+
+
+
         }
         public override bool execute(Characters.Player player)
         {

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using StarterGame.Characters;
 
 namespace StarterGame.Commands
 {
@@ -8,9 +9,11 @@ namespace StarterGame.Commands
     {
         public EquipCommand() : base()
         {
-            this.name = "equip";
+
+                this.name = "equip";
         }
-        public override bool execute(Characters.Player player)
+
+        public override bool execute(Player player)
         {
             throw new NotImplementedException();
         }

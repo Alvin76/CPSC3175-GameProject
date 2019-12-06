@@ -20,7 +20,7 @@ namespace StarterGame.Characters
         int CurrentTP { get; set; }
         */
 
-        void attack(IStats unit);
+        //void attack(IStats unit); @Bugs this was an issue 
         void takeDamage(int damage);
     }
 }

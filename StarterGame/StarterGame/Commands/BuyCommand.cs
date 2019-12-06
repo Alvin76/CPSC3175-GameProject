@@ -4,12 +4,12 @@ using System.Text;
 
 namespace StarterGame.Commands
 {
-    //THis is to add combat into the game not sure if it is going to be used
+    //Buying and selling comback to it
     public class BuyCommand : Command
     {
         public BuyCommand() : base()
         {
-            this.name = "Time";
+            this.name = "buy";
         }
         public override bool execute(Characters.Player player)
         {

@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System;
+using StarterGame.Goods;
+using StarterGame.IGoods;
 
 namespace StarterGame
 {
@@ -56,18 +58,21 @@ namespace StarterGame
         }
         //this is going to return items that are avaible in the room
         /*
+         * This is broken all items are not working
+         */
+        /*
         public string getItems()
         {
             string itemsNames = "Item: ";
-            Dictionary<string, items>.KeyCollection keys = items.Keys;
+            Dictionary<string, Items>.KeyCollection keys = Items.Keys;
             foreach(object items in keys)
             {
-                itemsNames += " " + itemsNames;
+                itemsNames += ", " + itemsNames;
             }
 
             return itemsNames;
-        }*/
-
+        }
+        */
         public string description()
         {
             return "You are " + this.tag + ".\n *** " + this.getExits();
@@ -76,7 +81,15 @@ namespace StarterGame
         /*
         public string TradeRoom()
         {
-            NotImplementedYet
+            string itemsNames = "Item: ";
+            Dictionary<string, Items>.KeyCollection keys = items.Keys;
+            foreach (object items in keys)
+            {
+                itemsNames += ", " + itemsNames;
+            }
+
+            return itemsNames;
         }*/
     }
+    
 }

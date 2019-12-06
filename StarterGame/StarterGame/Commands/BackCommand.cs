@@ -9,13 +9,14 @@ namespace StarterGame.Commands
     {
         public BackCommand() : base()
         {
-            this.name = "attack";
+            this.name = "back";
+
         }
         public override bool execute(Characters.Player player)
         {
             if (this.hasSecondWord())
             {
-                player.outputMessage("\nI backup quit " + this.secondWord);
+                player.outputMessage("\nI cannot backup " + this.secondWord);
 
             }
             return false;
