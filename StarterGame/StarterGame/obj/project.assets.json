@@ -721,30 +721,28 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Konoko\\.nuget\\packages\\": {},
+    "C:\\Users\\Adam\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\VS projects\\GameProject\\CPSC3175-GameProject\\StarterGame\\StarterGame\\StarterGame.csproj",
+      "projectUniqueName": "C:\\Users\\Adam\\Dropbox\\GitHub\\CPSC3175-GameProject\\StarterGame\\StarterGame\\StarterGame.csproj",
       "projectName": "StarterGame",
-      "projectPath": "F:\\VS projects\\GameProject\\CPSC3175-GameProject\\StarterGame\\StarterGame\\StarterGame.csproj",
-      "packagesPath": "C:\\Users\\Konoko\\.nuget\\packages\\",
-      "outputPath": "F:\\VS projects\\GameProject\\CPSC3175-GameProject\\StarterGame\\StarterGame\\obj\\",
+      "projectPath": "C:\\Users\\Adam\\Dropbox\\GitHub\\CPSC3175-GameProject\\StarterGame\\StarterGame\\StarterGame.csproj",
+      "packagesPath": "C:\\Users\\Adam\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Adam\\Dropbox\\GitHub\\CPSC3175-GameProject\\StarterGame\\StarterGame\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Konoko\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Adam\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.1"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
