@@ -13,13 +13,6 @@ namespace StarterGame.Commands
         private string _thirdWord;
         public string thirdWord { get { return _thirdWord; } set { _thirdWord = value; } }
 
-        public int _Time
-        {
-            get { return _Time; }
-            set { _Time = value; }
-        }
-        private int Time;
-
         public Command()
         {
             this.name = "";

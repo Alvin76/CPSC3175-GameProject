@@ -9,10 +9,7 @@ namespace StarterGame.Commands
     {
         public BuyCommand() : base()
         {
-            if (_Time < 720)
-            {
-                this.name = "buy";
-            }
+            this.name = "buy";
         }
         public override bool execute(Characters.Player player)
         {

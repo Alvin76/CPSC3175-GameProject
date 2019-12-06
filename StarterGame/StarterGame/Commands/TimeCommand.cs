@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using StarterGame.Characters;
-
+/*
 namespace StarterGame.Commands
 {
     //THis is to add combat into the game not sure if it is going to be used
@@ -27,4 +27,4 @@ namespace StarterGame.Commands
             return false;
         }
     }
-}
+}*/

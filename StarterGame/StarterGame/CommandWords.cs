@@ -15,11 +15,9 @@ namespace StarterGame
                                                   new BackCommand(),
                                                   new AttackCommand(), 
                                                   new EquipCommand(), 
-                                                  new HelpCommand(),
                                                   new InvantoryCommand(), 
                                                   new ConditionCommand(), 
-                                                  new StatisCommand(),
-                                                  new TimeCommand()
+                                                  new StatisCommand()
         };
         //Added in FindCommand 
 

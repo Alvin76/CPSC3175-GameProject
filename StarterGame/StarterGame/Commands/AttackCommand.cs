@@ -9,11 +9,8 @@ namespace StarterGame.Commands
     {
         public AttackCommand() : base()
         {
-            if(_Time < 720)
-            {
-                this.name = "attack";
-                this._Time = +10;
-            }
+            this.name = "attack";
+
 
 
         }

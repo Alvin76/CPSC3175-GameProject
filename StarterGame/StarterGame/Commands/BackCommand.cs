@@ -9,11 +9,8 @@ namespace StarterGame.Commands
     {
         public BackCommand() : base()
         {
-            if (_Time < 720)
-            {
-                this.name = "back";
-                this._Time = -10;
-            }
+            this.name = "back";
+
         }
         public override bool execute(Characters.Player player)
         {
