@@ -8,6 +8,7 @@ namespace StarterGame.Characters
 {
     public class Player : IStats
     {
+        Stack rooms = new Stack();
         // singleton for player class
         private static Player player = null;
 
@@ -251,14 +252,15 @@ namespace StarterGame.Characters
             }
             return effect;
         }
-
+        
 
         private Room _currentRoom = null;
         public Room currentRoom
         {
             get
-            {
+            {           
                 return _currentRoom;
+
             }
             set
             {
@@ -269,6 +271,7 @@ namespace StarterGame.Characters
         public Player(Room room)//, GameOutput output)
         {
             _currentRoom = room;
+            
         }
 
         //This is to move into each room or how the GoComand works
